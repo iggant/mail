@@ -277,6 +277,7 @@ module Mail
       def self.safe_for_line_ending_conversion?(string) #:nodoc:
         if string.encoding == Encoding::BINARY
           string.ascii_only?
+          true
         else
           string.valid_encoding?
         end
